@@ -1,0 +1,38 @@
+package constructor;
+import java.util.Scanner;
+
+public class StudentApp {
+	public static void main(String[] args) {
+		
+		Scanner scan =new Scanner(System.in);
+		System.out.println("enter how many objects you want to create");
+		Student arr[]=new Student [scan.nextInt()];
+		
+		for(int i=0;i<=arr.length-1;i++)
+
+		{
+
+		System.out.println("Enter ID");
+
+		int id=scan.nextInt();
+
+		System.out.println("Enter Name");
+
+		String name=scan.next();
+
+		System.out.println("Enter marks");
+		int marks=scan.nextInt();
+
+		arr[i]=new Student(id, name, marks);
+		}
+		for(int i=0;i<=arr.length-1;i++)
+
+		{
+
+		System.out.print(arr[i].id+" "+arr[i].name+" "+arr[i].marks+" | ");
+
+		}
+		
+	}
+
+}
